@@ -21,7 +21,7 @@ public void OnEntityCreated(int iEntity, const char[] sClassname)
 {
 	if (!g_bAllowPointServerCommand && strcmp(sClassname, "point_servercommand") == 0)
 	{
-		if (iEntity != INVALID_ENT_REFERENCE && IsValidEntity(iEntity))
+		if (iEntity != 0 && IsValidEntity(iEntity))
 		{
 			RemoveEntity(iEntity);
 		}
